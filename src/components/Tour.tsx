@@ -175,7 +175,7 @@ export default function Tour() {
           transition: "width 0.3s ease",
         }} />
       </div>
-      <Column padding="28" gap="16">
+      <Column padding="24" gap="16">
         <Text variant="body-default-s" onBackground="neutral-weak">
           Step {step + 1} of {STEPS.length}
         </Text>
