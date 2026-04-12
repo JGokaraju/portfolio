@@ -1,5 +1,6 @@
 import { Column, Heading, Text, Line, Meta } from "@once-ui-system/core";
 import { baseURL } from "@/resources";
+import HeroSplash from "@/components/HeroSplash";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -13,11 +14,13 @@ export async function generateMetadata() {
 
 export default function Conclusion() {
   return (
-    <Column maxWidth="s" gap="m" paddingY="64">
-      <Heading variant="display-strong-l" paddingBottom="8">
-        Conclusion
-      </Heading>
-      <Line marginBottom="24" />
+    <Column maxWidth="s" gap="m" paddingBottom="64">
+      <HeroSplash
+        label="Praxis II Portfolio · 2026"
+        title="Conclusion"
+        subtitle="A year of engineering design"
+      />
+      <Line marginBottom="32" />
 
       <Text variant="body-default-l" onBackground="neutral-weak">
         Looking back on my first year, this portfolio captures not just the projects I completed,

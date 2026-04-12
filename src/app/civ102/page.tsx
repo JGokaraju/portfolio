@@ -6,6 +6,7 @@ import {
   Row,
   Meta,
 } from "@once-ui-system/core";
+import HeroSplash from "@/components/HeroSplash";
 import Image from "next/image";
 import { baseURL } from "@/resources";
 import React from "react";
@@ -58,33 +59,12 @@ export default function CIV102() {
   return (
     <Column maxWidth="s" gap="m" paddingBottom="64">
 
-      {/* Hero splash */}
-      <div
-        style={{
-          minHeight: "calc(100vh - 160px)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          paddingBottom: "56px",
-          paddingTop: "80px",
-        }}
-      >
-        <Text variant="body-default-s" onBackground="neutral-weak" style={{ letterSpacing: "0.05em", marginBottom: "16px" }}>
-          CIV102 · University of Toronto · Fall 2025
-        </Text>
-        <Heading variant="display-strong-l" style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", lineHeight: "1.06" }}>
-          Matboard Bridge
-        </Heading>
-        <Heading as="h2" variant="display-default-m" onBackground="neutral-weak" style={{ marginTop: "10px" }}>
-          Variable-Span Bridge for Maximum Load Capacity
-        </Heading>
-        <Text variant="body-default-s" onBackground="neutral-weak" style={{ marginTop: "12px" }}>
-          Ben Wei · Tristan Heusser · Joti Gokaraju · TA: Junyan Xiao
-        </Text>
-        <Text variant="body-default-s" onBackground="neutral-weak" style={{ marginTop: "40px", opacity: 0.45 }}>
-          ↓ scroll to explore
-        </Text>
-      </div>
+      <HeroSplash
+        label="CIV102 · University of Toronto · Fall 2025"
+        title="Matboard Bridge"
+        subtitle="Variable-Span Bridge for Maximum Load Capacity"
+        team="Ben Wei · Tristan Heusser · Joti Gokaraju · TA: Junyan Xiao"
+      />
 
       <Line marginBottom="32" />
 

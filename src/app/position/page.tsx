@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import { baseURL } from "@/resources";
 import React from "react";
+import HeroSplash from "@/components/HeroSplash";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -61,12 +62,13 @@ function Figure({
 
 export default function PositionStatement() {
   return (
-    <Column maxWidth="s" gap="m" paddingY="64">
-      {/* Page title */}
-      <Heading variant="display-strong-l" paddingBottom="8">
-        My Position as an Engineering Designer
-      </Heading>
-      <Line marginBottom="24" />
+    <Column maxWidth="s" gap="m" paddingBottom="64">
+      <HeroSplash
+        label="ESC102 · University of Toronto · 2026"
+        title="Position Statement"
+        subtitle="My Position as an Engineering Designer"
+      />
+      <Line marginBottom="32" />
 
       {/* Section 1: My Position */}
       <Heading as="h2" variant="display-strong-s" paddingBottom="8">
