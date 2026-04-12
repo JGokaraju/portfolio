@@ -6,6 +6,13 @@ import { useEffect, useState } from "react";
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
+
+const position = { label: "Position Statement", path: "/position" };
+const praxisI = { label: "Praxis I", path: "/praxis-i" };
+const civ102 = { label: "CIV102", path: "/civ102" };
+const praxisII = { label: "Praxis II", path: "/praxis-ii" };
+const conclusion = { label: "Conclusion", path: "/conclusion" };
+const references = { label: "References", path: "/references" };
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -162,6 +169,120 @@ export const Header = () => {
                       prefixIcon="gallery"
                       href="/gallery"
                       selected={pathname.startsWith("/gallery")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/position"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="document"
+                      href="/position"
+                      label={position.label}
+                      selected={pathname.startsWith("/position")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="document"
+                      href="/position"
+                      selected={pathname.startsWith("/position")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/praxis-i"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="backpack"
+                      href="/praxis-i"
+                      label={praxisI.label}
+                      selected={pathname.startsWith("/praxis-i")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="backpack"
+                      href="/praxis-i"
+                      selected={pathname.startsWith("/praxis-i")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/civ102"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="bridge"
+                      href="/civ102"
+                      label={civ102.label}
+                      selected={pathname.startsWith("/civ102")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="bridge"
+                      href="/civ102"
+                      selected={pathname.startsWith("/civ102")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/praxis-ii"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="screwdriver"
+                      href="/praxis-ii"
+                      label={praxisII.label}
+                      selected={pathname.startsWith("/praxis-ii")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="screwdriver"
+                      href="/praxis-ii"
+                      selected={pathname.startsWith("/praxis-ii")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/conclusion"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="checkCircle"
+                      href="/conclusion"
+                      label={conclusion.label}
+                      selected={pathname.startsWith("/conclusion")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="checkCircle"
+                      href="/conclusion"
+                      selected={pathname.startsWith("/conclusion")}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/references"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="listNumbers"
+                      href="/references"
+                      label={references.label}
+                      selected={pathname.startsWith("/references")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="listNumbers"
+                      href="/references"
+                      selected={pathname.startsWith("/references")}
                     />
                   </Row>
                 </>

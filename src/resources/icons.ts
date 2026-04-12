@@ -20,6 +20,11 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiBackpackDuotone,
+  PiBridgeDuotone,
+  PiScrewdriverDuotone,
+  PiCheckCircleDuotone,
+  PiListNumbersDuotone,
 } from "react-icons/pi";
 
 import {
@@ -54,6 +59,11 @@ export const iconLibrary: Record<string, IconType> = {
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
+  backpack: PiBackpackDuotone,
+  bridge: PiBridgeDuotone,
+  screwdriver: PiScrewdriverDuotone,
+  checkCircle: PiCheckCircleDuotone,
+  listNumbers: PiListNumbersDuotone,
   javascript: SiJavascript,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
