@@ -64,7 +64,7 @@ export default function PraxisI() {
     <Column maxWidth="s" gap="m" paddingY="64">
 
       {/* Page title */}
-      <Text variant="body-default-s" onBackground="neutral-weak">
+      <Text id="tour-page-top" variant="body-default-s" onBackground="neutral-weak">
         ESC101 · Division of Engineering Science, University of Toronto · September–December 2025
       </Text>
       <Heading variant="display-strong-l" paddingBottom="4">
@@ -280,7 +280,7 @@ export default function PraxisI() {
       <Line marginTop="32" marginBottom="24" />
 
       {/* CTMFs */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="4">
+      <Heading id="tour-ctmf-section" as="h2" variant="display-strong-s" paddingBottom="4">
         Concepts, Tools, Models & Frameworks
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak" paddingBottom="24">

@@ -10,7 +10,6 @@ import {
 } from "@once-ui-system/core";
 import Image from "next/image";
 import { home, person, baseURL, routes } from "@/resources";
-import Tour from "@/components/Tour";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -78,35 +77,53 @@ export default function Home() {
         }}
       />
 
-      {/* Hero */}
-      <Column fillWidth horizontal="center" gap="l" align="center">
-        <RevealFx translateY="4" horizontal="center" paddingBottom="8">
+      {/* Hero — full-width banner with text overlay */}
+      <RevealFx translateY="4" fillWidth>
+        <div style={{
+          position: "relative",
+          width: "100%",
+          height: "420px",
+          borderRadius: "16px",
+          overflow: "hidden",
+        }}>
           <Image
             src="/images/joti.jpg"
             alt="Joti Gokaraju"
-            width={120}
-            height={120}
-            style={{ borderRadius: "50%", objectFit: "cover" }}
+            fill
+            priority
+            style={{ objectFit: "cover", objectPosition: "center top" }}
           />
-        </RevealFx>
-        <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="8">
-          <Heading wrap="balance" variant="display-strong-l" align="center">
-            {home.headline}
-          </Heading>
-        </RevealFx>
-        <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="16">
-          <Text
-            wrap="balance"
-            onBackground="neutral-weak"
-            variant="heading-default-m"
-            align="center"
-          >
-            {home.subline}
-          </Text>
-        </RevealFx>
-      </Column>
-
-      <Tour />
+          {/* Gradient: transparent at top → dark at bottom */}
+          <div style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 55%, transparent 100%)",
+          }} />
+          {/* Text anchored to bottom-left */}
+          <div style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: "40px",
+          }}>
+            <Heading
+              wrap="balance"
+              variant="display-strong-l"
+              style={{ color: "#fff", textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}
+            >
+              {home.headline}
+            </Heading>
+            <Text
+              wrap="balance"
+              variant="heading-default-m"
+              style={{ color: "rgba(255,255,255,0.82)", marginTop: "10px" }}
+            >
+              {home.subline}
+            </Text>
+          </div>
+        </div>
+      </RevealFx>
 
       <Line />
 

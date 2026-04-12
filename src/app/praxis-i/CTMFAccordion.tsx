@@ -337,8 +337,10 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
 export default function CTMFAccordion() {
   return (
     <Column gap="12" fillWidth>
-      {CTMFS.map((ctmf) => (
-        <CTMFCard key={ctmf.id} ctmf={ctmf} />
+      {CTMFS.map((ctmf, i) => (
+        <div key={ctmf.id} id={i === 0 ? "tour-ctmf-first" : undefined}>
+          <CTMFCard ctmf={ctmf} />
+        </div>
       ))}
     </Column>
   );

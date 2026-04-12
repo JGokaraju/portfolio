@@ -84,6 +84,7 @@ export const Header = () => {
         </Row>
         <Row fillWidth horizontal="center">
           <Row
+            id="tour-nav"
             background="page"
             border="neutral-alpha-weak"
             radius="m-4"
