@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { home, person, baseURL, routes } from "@/resources";
 import Tour from "@/components/Tour";
+import StatsCounter from "@/components/StatsCounter";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -107,6 +108,8 @@ export default function Home() {
       </Column>
 
       <Tour />
+
+      <StatsCounter />
 
       <Line />
 

@@ -5,9 +5,10 @@ interface HeroSplashProps {
   title: string;
   subtitle: string;
   team?: string;
+  readingTime?: string;
 }
 
-export default function HeroSplash({ label, title, subtitle, team }: HeroSplashProps) {
+export default function HeroSplash({ label, title, subtitle, team, readingTime }: HeroSplashProps) {
   return (
     <div
       style={{
@@ -20,9 +21,16 @@ export default function HeroSplash({ label, title, subtitle, team }: HeroSplashP
       }}
     >
       <RevealFx translateY="4">
-        <Text variant="body-default-s" onBackground="neutral-weak" style={{ letterSpacing: "0.05em", marginBottom: "16px" }}>
-          {label}
-        </Text>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
+          <Text variant="body-default-s" onBackground="neutral-weak" style={{ letterSpacing: "0.05em" }}>
+            {label}
+          </Text>
+          {readingTime && (
+            <Text variant="body-default-s" onBackground="neutral-weak" style={{ opacity: 0.5 }}>
+              · {readingTime}
+            </Text>
+          )}
+        </div>
       </RevealFx>
 
       <RevealFx translateY="8" delay={0.1}>

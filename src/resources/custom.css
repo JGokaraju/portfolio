@@ -1,3 +1,28 @@
+/* ── Custom styles ─────────────────────────────────────────────────────── */
+
+/* Landing page section card hover */
+.hover-card:hover {
+  background: var(--neutral-background-weak) !important;
+  transform: translateX(4px);
+  transition: background 0.15s ease, transform 0.2s ease !important;
+}
+.hover-card {
+  transition: background 0.15s ease, transform 0.2s ease;
+}
+
+/* CTMF card header hover */
+.ctmf-card-header:hover {
+  background: var(--neutral-background-weak) !important;
+}
+
+/* Page anchors — hide on narrow viewports */
+@media (max-width: 1100px) {
+  .page-anchors {
+    display: none !important;
+  }
+}
+
+/* ── Once UI config (unused by default) ────────────────────────────────── */
 /* :root {
   /*
   /* Override default variables here */

@@ -277,6 +277,7 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
         gap="16"
         vertical="center"
         onClick={() => setOpen(!open)}
+        className="ctmf-card-header"
         style={{
           userSelect: "none",
           background: open ? "var(--neutral-background-weak)" : "transparent",

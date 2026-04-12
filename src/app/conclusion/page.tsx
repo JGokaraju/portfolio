@@ -19,6 +19,7 @@ export default function Conclusion() {
         label="Praxis II Portfolio · 2026"
         title="Conclusion"
         subtitle="A year of engineering design"
+        readingTime="~3 min read"
       />
       <Line marginBottom="32" />
 

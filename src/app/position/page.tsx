@@ -67,6 +67,7 @@ export default function PositionStatement() {
         label="ESC102 · University of Toronto · 2026"
         title="Position Statement"
         subtitle="My Position as an Engineering Designer"
+        readingTime="~6 min read"
       />
       <Line marginBottom="32" />
 

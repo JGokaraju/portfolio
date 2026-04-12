@@ -7,6 +7,7 @@ import {
   Meta,
 } from "@once-ui-system/core";
 import HeroSplash from "@/components/HeroSplash";
+import PageAnchors from "@/components/PageAnchors";
 import Image from "next/image";
 import { baseURL } from "@/resources";
 import React from "react";
@@ -64,12 +65,21 @@ export default function CIV102() {
         title="Matboard Bridge"
         subtitle="Variable-Span Bridge for Maximum Load Capacity"
         team="Ben Wei · Tristan Heusser · Joti Gokaraju · TA: Junyan Xiao"
+        readingTime="~8 min read"
       />
+      <PageAnchors anchors={[
+        { id: "section-opportunity", label: "Opportunity" },
+        { id: "section-objectives",  label: "Objectives" },
+        { id: "section-solution",    label: "Solution" },
+        { id: "section-results",     label: "Results" },
+        { id: "section-reflections", label: "Reflections" },
+        { id: "section-ctmfs",       label: "CTMFs" },
+      ]} />
 
       <Line marginBottom="32" />
 
       {/* Opportunity */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-opportunity" as="h2" variant="display-strong-s" paddingBottom="8">
         Opportunity
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak">
@@ -93,7 +103,7 @@ export default function CIV102() {
       <Line marginTop="8" marginBottom="24" />
 
       {/* Design Objectives */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-objectives" as="h2" variant="display-strong-s" paddingBottom="8">
         High-Level Design Objectives
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak" paddingBottom="16">
@@ -117,7 +127,7 @@ export default function CIV102() {
       <Line marginTop="16" marginBottom="24" />
 
       {/* Final Design */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-solution" as="h2" variant="display-strong-s" paddingBottom="8">
         Final Design Solution
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak">
@@ -159,7 +169,7 @@ export default function CIV102() {
       <Line marginTop="8" marginBottom="24" />
 
       {/* Results */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="16">
+      <Heading id="section-results" as="h2" variant="display-strong-s" paddingBottom="16">
         Results
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak" paddingBottom="16">
@@ -234,7 +244,7 @@ export default function CIV102() {
       <Line marginTop="24" marginBottom="24" />
 
       {/* Reflections */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-reflections" as="h2" variant="display-strong-s" paddingBottom="8">
         Process Reflections
       </Heading>
 
@@ -291,7 +301,7 @@ export default function CIV102() {
       <Line marginTop="32" marginBottom="24" />
 
       {/* CTMFs */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="4">
+      <Heading id="section-ctmfs" as="h2" variant="display-strong-s" paddingBottom="4">
         Concepts, Tools, Models & Frameworks
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak" paddingBottom="24">
