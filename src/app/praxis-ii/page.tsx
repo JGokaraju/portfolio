@@ -72,6 +72,8 @@ export default function PraxisII() {
         { id: "section-objectives",  label: "Objectives" },
         { id: "section-solution",    label: "Solution" },
         { id: "section-results",     label: "Results" },
+        { id: "section-one-pager",   label: "One-Pager" },
+        { id: "section-poster",      label: "Poster" },
         { id: "section-reflections", label: "Reflections" },
         { id: "section-ctmfs",       label: "CTMFs" },
       ]} />
@@ -205,7 +207,7 @@ export default function PraxisII() {
       <Line marginTop="24" marginBottom="24" />
 
       {/* One-Pager */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-one-pager" as="h2" variant="display-strong-s" paddingBottom="8">
         One-Pager
       </Heading>
       <Row fillWidth gap="16" s={{ direction: "column" }}>
@@ -224,7 +226,7 @@ export default function PraxisII() {
       <Line marginTop="8" marginBottom="24" />
 
       {/* Poster */}
-      <Heading as="h2" variant="display-strong-s" paddingBottom="8">
+      <Heading id="section-poster" as="h2" variant="display-strong-s" paddingBottom="8">
         Poster
       </Heading>
       <Figure

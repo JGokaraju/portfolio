@@ -290,6 +290,7 @@ const CTMFS: CTMFItem[] = [
 
 function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
   const [open, setOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const phaseStyle: Record<string, string> = {
     brand: "var(--brand-background-medium)",
@@ -317,10 +318,11 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
         gap="16"
         vertical="center"
         onClick={() => setOpen(!open)}
-        className="ctmf-card-header"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         style={{
           userSelect: "none",
-          background: open ? "var(--neutral-background-weak)" : "transparent",
+          background: open || hovered ? "var(--neutral-background-weak)" : "transparent",
           transition: "background 0.2s",
         }}
       >
