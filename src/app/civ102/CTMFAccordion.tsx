@@ -324,18 +324,21 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
 
   return (
     <Column border="neutral-alpha-medium" radius="m" overflow="hidden" style={{ cursor: "pointer" }}>
-      <Row
-        fillWidth
-        padding="20"
-        gap="16"
-        vertical="center"
+      <div
         onClick={() => setOpen(!open)}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px",
+          gap: "16px",
+          boxSizing: "border-box",
           userSelect: "none",
           background: open || hovered ? "var(--neutral-background-weak)" : "transparent",
           transition: "background 0.2s",
+          cursor: "pointer",
         }}
       >
         <span
@@ -374,7 +377,7 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
         >
           ▾
         </span>
-      </Row>
+      </div>
       {open && (
         <>
           <Line />
