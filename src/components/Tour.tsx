@@ -189,7 +189,7 @@ export default function Tour() {
           <Line />
 
           <Row horizontal="between" vertical="center">
-            <Button variant="ghost" size="s" onClick={dismiss}>
+            <Button variant="tertiary" size="s" onClick={dismiss}>
               Skip tour
             </Button>
             <Button variant="primary" size="m" onClick={next} arrowIcon={step < steps.length - 1}>
