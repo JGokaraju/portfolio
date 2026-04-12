@@ -19,6 +19,20 @@ export const Footer = () => {
           size="s"
           variant="ghost"
         />
+        <IconButton
+          href="https://www.instagram.com/jotithegokaraju"
+          icon="instagram"
+          tooltip="@jotithegokaraju"
+          size="s"
+          variant="ghost"
+        />
+        <IconButton
+          href="https://www.linkedin.com/in/jotigokaraju/"
+          icon="linkedin"
+          tooltip="LinkedIn"
+          size="s"
+          variant="ghost"
+        />
       </Row>
       <Row height="80" hide s={{ hide: false }} />
     </Row>

@@ -61,22 +61,38 @@ function Figure({
 
 export default function PraxisI() {
   return (
-    <Column maxWidth="s" gap="m" paddingY="64">
+    <Column maxWidth="s" gap="m" paddingBottom="64">
 
-      {/* Page title */}
-      <Text id="tour-page-top" variant="body-default-s" onBackground="neutral-weak">
-        ESC101 · Division of Engineering Science, University of Toronto · September–December 2025
-      </Text>
-      <Heading variant="display-strong-l" paddingBottom="4">
-        Praxis I
-      </Heading>
-      <Heading as="h2" variant="display-default-m" onBackground="neutral-weak" paddingBottom="8">
-        Excess Backpack Strap Snagging
-      </Heading>
-      <Text variant="body-default-s" onBackground="neutral-weak" paddingBottom="8">
-        Design work completed in collaboration with my Praxis I team (Mohammed Elsayed, Ozan Gunduz, Jincheng Luo).
-      </Text>
-      <Line marginBottom="24" />
+      {/* Hero splash */}
+      <div
+        id="tour-page-top"
+        style={{
+          minHeight: "calc(100vh - 160px)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          paddingBottom: "56px",
+          paddingTop: "80px",
+        }}
+      >
+        <Text variant="body-default-s" onBackground="neutral-weak" style={{ letterSpacing: "0.05em", marginBottom: "16px" }}>
+          ESC101 · University of Toronto · Fall 2025
+        </Text>
+        <Heading variant="display-strong-l" style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)", lineHeight: "1.06" }}>
+          Praxis I
+        </Heading>
+        <Heading as="h2" variant="display-default-m" onBackground="neutral-weak" style={{ marginTop: "10px" }}>
+          Excess Backpack Strap Snagging
+        </Heading>
+        <Text variant="body-default-s" onBackground="neutral-weak" style={{ marginTop: "12px" }}>
+          Mohammed Elsayed · Ozan Gunduz · Jincheng Luo · Joti Gokaraju
+        </Text>
+        <Text variant="body-default-s" onBackground="neutral-weak" style={{ marginTop: "40px", opacity: 0.45 }}>
+          ↓ scroll to explore
+        </Text>
+      </div>
+
+      <Line marginBottom="32" />
 
       {/* Opportunity */}
       <Heading as="h2" variant="display-strong-s" paddingBottom="8">
