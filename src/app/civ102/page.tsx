@@ -8,10 +8,9 @@ import {
 } from "@once-ui-system/core";
 import HeroSplash from "@/components/HeroSplash";
 import PageAnchors from "@/components/PageAnchors";
-import Image from "next/image";
 import { baseURL } from "@/resources";
-import React from "react";
 import CTMFAccordion from "./CTMFAccordion";
+import Figure from "@/components/Figure";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -29,32 +28,6 @@ function Cite({ n }: { n: number }) {
   );
 }
 
-function Figure({
-  src,
-  alt,
-  caption,
-}: {
-  src: string;
-  alt: string;
-  caption: React.ReactNode;
-}) {
-  return (
-    <Column gap="8" fillWidth marginTop="24" marginBottom="24">
-      <Row fillWidth border="neutral-alpha-medium" radius="m" overflow="hidden">
-        <Image
-          src={src}
-          alt={alt}
-          width={900}
-          height={600}
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
-      </Row>
-      <Text variant="body-default-s" onBackground="neutral-weak" align="center">
-        {caption}
-      </Text>
-    </Column>
-  );
-}
 
 export default function CIV102() {
   return (
@@ -253,11 +226,17 @@ export default function CIV102() {
       </Heading>
       <Text variant="body-default-l" onBackground="neutral-weak">
         <strong>Mathematical prototypes integrated into diverging, not just converging.</strong>{" "}
-        In Praxis I, I used simulation as a final verification step. In CIV102, our
-        Python/Desmos/Sheets software stack ran continuously throughout the iteration process —
-        new cross-section sketches were analysed the same evening they were drawn. Embedding
-        computational tools earlier in the process produced faster and better iterations than
-        reserving them for the end.
+        In Praxis I, I used simulation as a final verification step. That is, the MATLAB model came
+        after our concept was essentially fixed. It merely served to confirm a number to put in the
+        report. In CIV102, we developed our own Python/Desmos/Google Sheets software stack to
+        identify factors of safety for each prototype we designed based on its dimensions we chose.
+        Every time we created a new design, we ran the mathematical prototype immediately to get key
+        safety values. The result was that each prototype informed the next based on verified data.
+        For instance, if the FOS for flange buckling came back too low, the next sketch had a
+        thicker top flange. This way, we were able to incorporate mathematical prototyping directly
+        into our FDCR process rather than as a mere supplement for a report. Moreover, it improved
+        our engineering objectivity as each new prototype we diverged to was informed by a clear
+        mathematical prototype analysis of a previous design.
       </Text>
 
       <Heading as="h3" variant="heading-strong-l" paddingTop="24" paddingBottom="8">

@@ -348,11 +348,16 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
         </span>
         <Column flex={1} gap="2">
           <Text variant="heading-strong-m">{ctmf.name}</Text>
-          {!open && (
+          <div style={{
+            overflow: "hidden",
+            maxHeight: open ? "0px" : "60px",
+            opacity: open ? 0 : 1,
+            transition: "max-height 0.25s ease, opacity 0.18s ease",
+          }}>
             <Text variant="body-default-s" onBackground="neutral-weak">
               {ctmf.summary}
             </Text>
-          )}
+          </div>
         </Column>
         <span
           style={{
@@ -366,14 +371,16 @@ function CTMFCard({ ctmf }: { ctmf: CTMFItem }) {
           ▾
         </span>
       </div>
-      {open && (
-        <>
-          <Line />
-          <Column padding="20" gap="m">
-            {ctmf.content}
-          </Column>
-        </>
-      )}
+      <div style={{
+        overflow: "hidden",
+        maxHeight: open ? "5000px" : "0px",
+        transition: open ? "max-height 0.45s ease" : "max-height 0.22s ease",
+      }}>
+        <Line />
+        <Column padding="20" gap="m">
+          {ctmf.content}
+        </Column>
+      </div>
     </Column>
   );
 }

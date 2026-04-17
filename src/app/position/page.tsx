@@ -215,7 +215,7 @@ export default function PositionStatement() {
         often at the expense of my own judgment. This showed up concretely in Praxis II. Because I
         was solely focused on the community, I defaulted to following our main stakeholder Mr.
         Ginsberg's stated preferences rather than trusting my own engineering reasoning. When he
-        expressed in feedback that he wanted a purely mechanical design<Cite n={4} />. I immediately
+        expressed in feedback that he wanted a purely mechanical design<Cite n={4} />, I immediately
         began thinking about scrapping everything I had built in order to accommodate that
         preference.
       </Text>

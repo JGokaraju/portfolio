@@ -22,6 +22,22 @@
   }
 }
 
+/* Mobile anchor pill — show only on narrow viewports */
+.page-anchors-mobile {
+  display: none !important;
+}
+@media (max-width: 1100px) {
+  .page-anchors-mobile {
+    display: flex !important;
+  }
+}
+
+/* Lightbox fade-in */
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* ── Once UI config (unused by default) ────────────────────────────────── */
 /* :root {
   /*

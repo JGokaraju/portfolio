@@ -6,12 +6,12 @@ import {
   Row,
   Meta,
 } from "@once-ui-system/core";
-import Image from "next/image";
 import { baseURL } from "@/resources";
-import React from "react";
 import CTMFAccordion from "./CTMFAccordion";
 import HeroSplash from "@/components/HeroSplash";
 import PageAnchors from "@/components/PageAnchors";
+import Figure from "@/components/Figure";
+
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -29,37 +29,6 @@ function Cite({ n }: { n: number }) {
   );
 }
 
-function Figure({
-  src,
-  alt,
-  caption,
-}: {
-  src: string;
-  alt: string;
-  caption: React.ReactNode;
-}) {
-  return (
-    <Column gap="8" fillWidth marginTop="24" marginBottom="24">
-      <Row
-        fillWidth
-        border="neutral-alpha-medium"
-        radius="m"
-        overflow="hidden"
-      >
-        <Image
-          src={src}
-          alt={alt}
-          width={900}
-          height={600}
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
-      </Row>
-      <Text variant="body-default-s" onBackground="neutral-weak" align="center">
-        {caption}
-      </Text>
-    </Column>
-  );
-}
 
 export default function PraxisI() {
   return (
